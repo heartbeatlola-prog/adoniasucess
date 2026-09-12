@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>1MPACT — GOD • FAITH • EMPOWERED</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f4;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    :root {
+      --black: #101010;
+      --dark: #171717;
+      --white: #ffffff;
+      --cream: #f7f7f4;
+      --gold: #d7b35b;
+      --green: #163c2b;
+      --gray: #666;
+      --border: #ddddda;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .nav {
+      max-width: 1150px;
+      margin: auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* =========================
+       YOUR PICTURE / LOGO
+    ========================= */
+
+    .logo-image {
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    /*
+      YOUR IMAGE GOES HERE.
+
+      Change "your-picture.jpg" to the
+      exact name of your image.
+
+      Example:
+
+      <img src="your-picture.jpg"
+      alt="1MPACT Logo"
+      class="logo-image">
+    */
+
+    .logo-text strong {
+      display: block;
+      font-size: 19px;
+      letter-spacing: 1px;
+    }
+
+    .logo-text span {
+      font-size: 8px;
+      letter-spacing: 2px;
+      color: #777;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: bold;
+      color: #444;
+    }
+
+    nav a:hover {
+      color: var(--green);
+    }
+
+    .nav-button {
+      background: var(--black);
+      color: white !important;
+      padding: 11px 17px;
+      border-radius: 8px;
+    }
+
+    .menu-button {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 28px;
+    }
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    section {
+      padding: 100px 20px;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.1;
+    }
+
+    h2 {
+      font-size: clamp(36px, 6vw, 65px);
+      margin-bottom: 20px;
+    }
+
+    .section-intro {
+      max-width: 650px;
+      color: var(--gray);
+      font-size: 17px;
+    }
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 21px;
+      border-radius: 9px;
+      font-weight: bold;
+      border: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: var(--black);
+      color: white;
+    }
+
+    .btn-light {
+      background: white;
+      border: 1px solid #ddd;
+    }
+
+    .btn-green {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #111;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 150px;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(215,179,91,0.18), transparent 30%),
+        radial-gradient(circle at 10% 80%, rgba(22,60,43,0.10), transparent 35%),
+        var(--cream);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(50px, 8vw, 90px);
+      letter-spacing: -4px;
+    }
+
+    .hero h1 span {
+      color: var(--green);
+    }
+
+    .hero-text {
+      max-width: 650px;
+      margin-top: 25px;
+      font-size: 19px;
+      color: #555;
+    }
+
+    .hero-card {
+      background: var(--black);
+      color: white;
+      border-radius: 25px;
+      padding: 35px;
+      min-height: 380px;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "1";
+      position: absolute;
+      top: -50px;
+      right: 0;
+      font-size: 280px;
+      font-weight: bold;
+      color: rgba(255,255,255,0.04);
+    }
+
+    .hero-card h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .hero-card p {
+      color: #ccc;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 70px;
+    }
+
+    .big-text {
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: bold;
+    }
+
+    .about-copy p {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       TALK
+    ========================= */
+
+    .talk {
+      background: var(--green);
+      color: white;
+    }
+
+    .talk-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .talk h2 {
+      font-size: clamp(42px, 6vw, 70px);
+    }
+
+    .talk p {
+      color: #d5dfd9;
+      font-size: 18px;
+    }
+
+    .talk-card {
+      background: white;
+      color: #111;
+      padding: 35px;
+      border-radius: 20px;
+    }
+
+    .talk-card h3 {
+      font-size: 28px;
+      margin-bottom: 12px;
+    }
+
+    .talk-card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    /* =========================
+       HEARD
+    ========================= */
+
+    .heard {
+      background: var(--cream);
+    }
+
+    .heard-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 45px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .card-number {
+      color: var(--gold);
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+
+    .card h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    /* =========================
+       JESUS
+    ========================= */
+
+    .jesus {
+      background: white;
+    }
+
+    .jesus-box {
+      background: #111;
+      color: white;
+      border-radius: 25px;
+      padding: 60px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .jesus-box p {
+      color: #ccc;
+      font-size: 17px;
+    }
+
+    .jesus-options {
+      display: grid;
+      gap: 10px;
+    }
+
+    .jesus-option {
+      background: #1d1d1d;
+      border: 1px solid #333;
+      padding: 17px;
+      border-radius: 10px;
+      color: #ddd;
+    }
+
+    /* =========================
+       PROFESSIONAL
+    ========================= */
+
+    .professional {
+      background: var(--cream);
+    }
+
+    .professional-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+      margin-top: 45px;
+    }
+
+    .pro-card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .pro-card h3 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .pro-card p {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    .pro-list {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .pro-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .pro-list li::before {
+      content: "✓";
+      margin-right: 10px;
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .projects {
+      background: white;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 45px;
+    }
+
+    .project {
+      min-height: 240px;
+      background: #f1f1ed;
+      border-radius: 18px;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #777;
+    }
+
+    .project h3 {
+      font-size: 25px;
+    }
+
+    /* =========================
+       RESOURCES
+    ========================= */
+
+    .resources {
+      background: var(--cream);
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .resource {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      border: 1px solid var(--border);
+    }
+
+    .resource h3 {
+      margin-bottom: 8px;
+    }
+
+    .resource p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    /* =========================
+       SOCIAL
+    ========================= */
+
+    .social {
+      background: white;
+      text-align: center;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .social-link {
+      padding: 14px 22px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    .social-link:hover {
+      background: var(--black);
+      color: white;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: var(--black);
+      color: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+    }
+
+    .contact p {
+      color: #bbb;
+    }
+
+    .contact-details {
+      margin-top: 25px;
+    }
+
+    .contact-details a {
+      display: block;
+      margin: 14px 0;
+      color: #ddd;
+    }
+
+    .contact-details a:hover {
+      color: var(--gold);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #080808;
+      color: #777;
+      text-align: center;
+      padding: 25px;
+      font-size: 13px;
+    }
+
+    /* =========================
+       MODAL
+    ========================= */
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 2000;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    .modal.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-box {
+      background: white;
+      width: 100%;
+      max-width: 650px;
+      border-radius: 20px;
+      padding: 35px;
+      position: relative;
+      color: #111;
+      margin: 30px auto;
+    }
+
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      border: none;
+      background: none;
+      font-size: 30px;
+    }
+
+    .modal-box h2 {
+      font-size: 36px;
+    }
+
+    .modal-intro {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    /* =========================
+       FORM
+    ========================= */
+
+    .form-group {
+      margin-bottom: 17px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 7px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #d5d5d5;
+      border-radius: 8px;
+      outline: none;
+      background: white;
+    }
+
+    .form-group textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .form-note {
+      background: #eef3ef;
+      padding: 13px;
+      border-radius: 8px;
+      color: #555;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 850px) {
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 15px;
+        right: 15px;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        padding: 10px;
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .talk-grid,
+      .jesus-box,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .heard-grid,
+      .project-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section {
+        padding: 75px 20px;
+      }
+
+      .jesus-box {
+        padding: 35px 25px;
+      }
+    }
+
+    @media (max-width: 550px) {
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .heard-grid,
+      .project-grid,
+      .resource-grid,
+      .professional-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .modal-box {
+        padding: 25px 18px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="nav">
+
+      <a href="#home" class="logo">
+
+        <!--
+          ==========================================
+          ADD YOUR PICTURE/LOGO HERE
+          ==========================================
+
+          JUST CHANGE "your-picture.jpg"
+          TO THE NAME OF YOUR IMAGE.
+
+          Example:
+          <img src="logo.png"
+          alt="1MPACT Logo"
+          class="logo-image">
+        -->
+
+        <img
+          src="WhatsApp Image 2026-09-11 at 11.42.58 PM.png"
+          alt="1MPACT Logo"
+          class="logo-image"
+        >
+
+        <div class="logo-text">
+
+          <strong>1MPACT</strong>
+
+          <span>
+            GOD • FAITH • EMPOWERED
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <button
+        class="menu-button"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
+
+
+      <nav id="navigation">
+
+        <a href="#about" onclick="closeMenu()">
+          About
+        </a>
+
+        <a href="#talk" onclick="closeMenu()">
+          Talk
+        </a>
+
+        <a href="#jesus" onclick="closeMenu()">
+          Jesus
+        </a>
+
+        <a href="#projects" onclick="closeMenu()">
+          Projects
+        </a>
+
+        <a href="#resources" onclick="closeMenu()">
+          Resources
+        </a>
+
+        <a
+          href="#contact"
+          onclick="closeMenu()"
+          class="nav-button"
+        >
+          Contact
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          1MPACT — GOD • FAITH • EMPOWERED
+        </div>
+
+        <h1>
+          You don't have to
+          <span>figure it all out alone.</span>
+        </h1>
+
+        <p class="hero-text">
+          A safe and welcoming space for young people
+          to be heard, encouraged, empowered and pointed
+          back to Christ.
+        </p>
+
+        <div class="buttons">
+
+          <a
+            href="#talk"
+            class="btn btn-dark"
+          >
+            I Need Someone to Talk To
+          </a>
+
+          <a
+            href="#jesus"
+            class="btn btn-light"
+          >
+            I Want to Know Jesus
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-card">
+
+        <div>
+
+          <div
+            class="eyebrow"
+            style="color:#d7b35b;"
+          >
+            YOU ARE WELCOME HERE
+          </div>
+
+          <h3>
+            You can talk.
+          </h3>
+
+          <p>
+            You can ask questions.
+            You can be honest.
+            You don't need to have everything
+            figured out before reaching out.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================= -->
+
+  <section class="about" id="about">
+
+    <div class="container about-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          WHY 1MPACT EXISTS
+        </div>
+
+        <div class="big-text">
+          It's not just about what we create.
+          It's about the people we reach.
+        </div>
+
+      </div>
+
+
+      <div class="about-copy">
+
+        <p>
+          Life can get confusing.
+          Faith can get complicated.
+          Purpose can feel distant.
+        </p>
+
+        <p>
+          Sometimes you simply need somebody
+          willing to listen without judging you.
+        </p>
+
+        <p>
+          1MPACT exists to create a space where
+          young people can talk, ask questions,
+          grow, discover purpose and take their
+          next step with Christ.
+        </p>
+
+        <p>
+          Whether you know exactly what you need
+          or you don't even know where to start,
+          you're welcome here.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       TALK
+  ========================= -->
+
+  <section class="talk" id="talk">
+
+    <div class="container talk-grid">
+
+      <div>
+
+        <div
+          class="eyebrow"
+          style="color:#d7b35b;"
+        >
+          A SPACE TO BE HEARD
+        </div>
+
+        <h2>
+          Need someone to talk to?
+        </h2>
+
+        <p>
+          Sometimes you don't need a lecture.
+          You just need someone willing to listen.
+        </p>
+
+        <div class="buttons">
+
+          <button
+            class="btn btn-gold"
+            onclick="openModal('talkModal')"
+          >
+            I Need Someone to Talk To
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="talk-card">
+
+        <h3>
+          You don't have to know what to say.
+        </h3>
+
+        <p>
+          Tell us what's on your heart.
+          It can be about your faith, purpose,
+          relationships, school, family,
+          personal struggles or something
+          you can't even explain yet.
+        </p>
+
+        <br>
+
+        <p>
+          You can simply say:
+          <strong>
+            "I don't know what I need.
+            I just need someone to talk to."
+          </strong>
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       HEARD
+  ========================= -->
+
+  <section class="heard">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        A PLACE FOR YOU
+      </div>
+
+      <h2>
+        Come as you are.
+      </h2>
+
+      <p class="section-intro">
+        You don't need the perfect words,
+        the perfect faith or a perfect life
+        before you reach out.
+      </p>
+
+
+      <div class="heard-grid">
+
+        <div class="card">
+
+          <div class="card-number">
+            LISTEN
+          </div>
+
+          <h3>
+            Be honest.
+          </h3>
+
+          <p>
+            Talk about what you're really
+            going through.
+            No pretending that everything is okay.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-number">
+            HEAR
+          </div>
+
+          <h3>
+            Be heard.
+          </h3>
+
+          <p>
+            Sometimes having someone genuinely
+            listen can be the beginning
+            of something better.
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <div class="card-number">
+            GROW
+          </div>
+
+          <h3>
+            Keep growing.
+          </h3>
+
+          <p>
+            Find encouragement, direction and
+            practical steps for your journey.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       JESUS
+  ========================= -->
+
+  <section class="jesus" id="jesus">
+
+    <div class="container">
+
+      <div class="jesus-box">
+
+        <div>
+
+          <div
+            class="eyebrow"
+            style="color:#d7b35b;"
+          >
+            CHRIST
+          </div>
+
+          <h2>
+            I Want to Know Jesus.
+          </h2>
+
+          <p>
+            If you're curious about Jesus,
+            Christianity or salvation,
+            you can start here.
+          </p>
+
+          <div class="buttons">
+
+            <button
+              class="btn btn-gold"
+              onclick="openModal('jesusModal')"
+            >
+              Start Here
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="jesus-options">
+
+          <div class="jesus-option">
+            Give my life to Christ
+          </div>
+
+          <div class="jesus-option">
+            Return to Christ
+          </div>
+
+          <div class="jesus-option">
+            Understand the Gospel
+          </div>
+
+          <div class="jesus-option">
+            Ask questions about Christianity
+          </div>
+
+          <div class="jesus-option">
+            Learn how to walk with Jesus
+          </div>
+
+          <div class="jesus-option">
+            Speak with someone about faith
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROFESSIONAL
+  ========================= -->
+
+  <section class="professional">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        PROFESSIONAL ENQUIRIES
+      </div>
+
+      <h2>
+        Let's create impact.
+      </h2>
+
+      <p class="section-intro">
+        1MPACT is available for meaningful
+        collaborations, conversations,
+        events and creative opportunities.
+      </p>
+
+
+      <div class="professional-grid">
+
+
+        <!-- INVITE -->
+
+        <div class="pro-card">
+
+          <h3>
+            Invite 1MPACT
+          </h3>
+
+          <p>
+            Interested in having Adonai Success
+            speak, participate or engage
+            with your audience?
+          </p>
+
+          <ul class="pro-list">
+
+            <li>Speaking engagements</li>
+            <li>Youth conversations</li>
+            <li>Conferences</li>
+            <li>Events</li>
+            <li>Interactive sessions</li>
+            <li>Faith & purpose conversations</li>
+
+          </ul>
+
+          <a
+            href="mailto:adonaisuccess1@gmail.com?subject=Invite%201MPACT"
+            class="btn btn-dark"
+          >
+            Book / Invite
+          </a>
+
+        </div>
+
+
+        <!-- WORK WITH ME -->
+
+        <div class="pro-card">
+
+          <h3>
+            Work With Me
+          </h3>
+
+          <p>
+            For brands, platforms and organisations
+            interested in collaborations and partnerships.
+          </p>
+
+          <ul class="pro-list">
+
+            <li>Brand collaborations</li>
+            <li>Social media promotions</li>
+            <li>Campaigns</li>
+            <li>Christian platforms</li>
+            <li>Apps & creative projects</li>
+            <li>Content collaborations</li>
+
+          </ul>
+
+          <a
+            href="mailto:adonaisuccess1@gmail.com?subject=Collaboration%20Enquiry"
+            class="btn btn-green"
+          >
+            Work With Me
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROJECTS
+  ========================= -->
+
+  <section class="projects" id="projects">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        1MPACT PROJECTS
+      </div>
+
+      <h2>
+        Ideas that become impact.
+      </h2>
+
+      <p class="section-intro">
+        A growing collection of conversations,
+        creative projects, events and initiatives.
+      </p>
+
+
+      <div class="project-grid">
+
+        <div class="project">
+          <div class="project-tag">
+            Coming Soon
+          </div>
+
+          <h3>
+            Short Films
+          </h3>
+        </div>
+
+
+        <div class="project">
+          <div class="project-tag">
+            Coming Soon
+          </div>
+
+          <h3>
+            Real Conversations
+          </h3>
+        </div>
+
+
+        <div class="project">
+          <div class="project-tag">
+            Coming Soon
+          </div>
+
+          <h3>
+            Events
+          </h3>
+        </div>
+
+
+        <div class="project">
+          <div class="project-tag">
+            Coming Soon
+          </div>
+
+          <h3>
+            Challenges
+          </h3>
+        </div>
+
+
+        <div class="project">
+          <div class="project-tag">
+            Coming Soon
+          </div>
+
+          <h3>
+            Bible Studies
+          </h3>
+        </div>
+
+
+        <div class="project">
+          <div class="project-tag">
+            Coming Soon
+          </div>
+
+          <h3>
+            Creative Initiatives
+          </h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       RESOURCES
+  ========================= -->
+
+  <section class="resources" id="resources">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        RESOURCES
+      </div>
+
+      <h2>
+        Something useful for your journey.
+      </h2>
+
+      <p class="section-intro">
+        Resources to help you grow in faith,
+        purpose, discipline and everyday life.
+      </p>
+
+
+      <div class="resource-grid">
+
+        <div class="resource">
+          <h3>Bible Studies</h3>
+          <p>
+            Simple studies to help you understand Scripture.
+          </p>
+        </div>
+
+
+        <div class="resource">
+          <h3>Reading Plans</h3>
+          <p>
+            Practical plans for building consistency.
+          </p>
+        </div>
+
+
+        <div class="resource">
+          <h3>Devotionals</h3>
+          <p>
+            Short reflections for your walk with Christ.
+          </p>
+        </div>
+
+
+        <div class="resource">
+          <h3>Videos</h3>
+          <p>
+            Conversations and content designed to encourage.
+          </p>
+        </div>
+
+
+        <div class="resource">
+          <h3>PDFs</h3>
+          <p>
+            Downloadable guides and useful resources.
+          </p>
+        </div>
+
+
+        <div class="resource">
+          <h3>Articles</h3>
+          <p>
+            Thoughts on faith, purpose and life.
+          </p>
+        </div>
+
+
+        <div class="resource">
+          <h3>Questions</h3>
+          <p>
+            Honest answers to difficult questions.
+          </p>
+        </div>
+
+
+        <div class="resource">
+          <h3>More Coming</h3>
+          <p>
+            This space will continue to grow.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SOCIAL MEDIA
+  ========================= -->
+
+  <section class="social">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        FOLLOW THE JOURNEY
+      </div>
+
+      <h2>
+        Stay connected.
+      </h2>
+
+      <p
+        class="section-intro"
+        style="margin:auto;"
+      >
+        Follow along for conversations,
+        encouragement, creativity and faith.
+      </p>
+
+
+      <div class="social-links">
+
+        <a
+          href="https://www.tiktok.com/@adonai.success"
+          target="_blank"
+          class="social-link"
+        >
+          TikTok — @adonai.success
+        </a>
+
+        <a
+          href="https://www.instagram.com/adonai.success"
+          target="_blank"
+          class="social-link"
+        >
+          Instagram — @adonai.success
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section class="contact" id="contact">
+
+    <div class="container contact-grid">
+
+      <div>
+
+        <div
+          class="eyebrow"
+          style="color:#d7b35b;"
+        >
+          CONTACT
+        </div>
+
+        <h2>
+          Let's talk.
+        </h2>
+
+        <p>
+          Whether it's about 1MPACT,
+          a collaboration, an event
+          or something else,
+          you're welcome to reach out.
+        </p>
+
+      </div>
+
+
+      <div class="contact-details">
+
+        <a href="mailto:adonaisuccess1@gmail.com">
+          ✉️ adonaisuccess1@gmail.com
+        </a>
+
+        <a
+          href="https://wa.me/2349061653995"
+          target="_blank"
+        >
+          💬 WhatsApp — 09061653995
+        </a>
+
+        <a
+          href="https://www.tiktok.com/@adonai.success"
+          target="_blank"
+        >
+          ♪ TikTok — @adonai.success
+        </a>
+
+        <a
+          href="https://www.instagram.com/adonai.success"
+          target="_blank"
+        >
+          ◎ Instagram — @adonai.success
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <p>
+      © <span id="year"></span>
+      1MPACT — GOD • FAITH • EMPOWERED
+    </p>
+
+    <p style="margin-top:5px;">
+      You don't always have to figure everything out alone.
+    </p>
+
+  </footer>
+
+
+  <!-- =========================
+       TALK FORM
+  ========================= -->
+
+  <div
+    class="modal"
+    id="talkModal"
+  >
+
+    <div class="modal-box">
+
+      <button
+        class="close"
+        onclick="closeModal('talkModal')"
+      >
+        ×
+      </button>
+
+      <div class="eyebrow">
+        A SPACE TO BE HEARD
+      </div>
+
+      <h2>
+        Tell us what's on your heart.
+      </h2>
+
+      <p class="modal-intro">
+        You don't have to explain everything perfectly.
+        Just start wherever you can.
+      </p>
+
+      <div class="form-note">
+        Your message will be prepared as a WhatsApp
+        message to 09061653995.
+      </div>
+
+
+      <form id="talkForm">
+
+        <div class="form-group">
+
+          <label>
+            What do you need?
+          </label>
+
+          <select id="talkTopic" required>
+
+            <option value="">
+              Select one
+            </option>
+
+            <option>
+              I just need someone to listen
+            </option>
+
+            <option>
+              I'm struggling with my faith
+            </option>
+
+            <option>
+              I want to return to Christ
+            </option>
+
+            <option>
+              I'm struggling with purpose
+            </option>
+
+            <option>
+              I'm going through something personally
+            </option>
+
+            <option>
+              I need someone to pray with me
+            </option>
+
+            <option>
+              I don't know what I need — I just need to talk
+            </option>
+
+            <option>
+              Other
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="talkName"
+            placeholder="Your name"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Age range
+          </label>
+
+          <select id="talkAge">
+
+            <option>
+              Prefer not to say
+            </option>
+
+            <option>
+              Under 13
+            </option>
+
+            <option>
+              13–15
+            </option>
+
+            <option>
+              16–17
+            </option>
+
+            <option>
+              18–20
+            </option>
+
+            <option>
+              21–25
+            </option>
+
+            <option>
+              26+
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Email
+          </label>
+
+          <input
+            type="email"
+            id="talkEmail"
+            placeholder="you@example.com"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            WhatsApp / Phone
+          </label>
+
+          <input
+            type="tel"
+            id="talkPhone"
+            placeholder="Optional"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Preferred method of contact
+          </label>
+
+          <select id="talkContact">
+
+            <option>
+              WhatsApp
+            </option>
+
+            <option>
+              Email
+            </option>
+
+            <option>
+              Either is fine
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Best time to reach you
+          </label>
+
+          <input
+            type="text"
+            id="talkTime"
+            placeholder="Example: Evening"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Tell us what's on your heart
+          </label>
+
+          <textarea
+            id="talkMessage"
+            placeholder="You can start anywhere..."
+            required
+          ></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Anything else?
+          </label>
+
+          <textarea
+            id="talkExtra"
+            placeholder="Optional"
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn btn-green"
+          style="width:100%;"
+        >
+          Send Message on WhatsApp
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       JESUS FORM
+  ========================= -->
+
+  <div
+    class="modal"
+    id="jesusModal"
+  >
+
+    <div class="modal-box">
+
+      <button
+        class="close"
+        onclick="closeModal('jesusModal')"
+      >
+        ×
+      </button>
+
+      <div class="eyebrow">
+        I WANT TO KNOW JESUS
+      </div>
+
+      <h2>
+        Start your journey.
+      </h2>
+
+      <p class="modal-intro">
+        Whatever brought you here,
+        you can ask questions and have
+        an honest conversation about Jesus.
+      </p>
+
+
+      <form id="jesusForm">
+
+        <div class="form-group">
+
+          <label>
+            What best describes you?
+          </label>
+
+          <select id="jesusTopic" required>
+
+            <option value="">
+              Select one
+            </option>
+
+            <option>
+              I want to give my life to Christ
+            </option>
+
+            <option>
+              I want to return to Christ
+            </option>
+
+            <option>
+              I want to understand the Gospel
+            </option>
+
+            <option>
+              I have questions about Christianity
+            </option>
+
+            <option>
+              I want to learn how to walk with Jesus
+            </option>
+
+            <option>
+              I want someone to talk to me about faith
+            </option>
+
+          </select>
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Name
+          </label>
+
+          <input
+            type="text"
+            id="jesusName"
+            placeholder="Your name"
+            required
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            WhatsApp / Phone
+          </label>
+
+          <input
+            type="tel"
+            id="jesusPhone"
+            placeholder="Optional"
+          >
+
+        </div>
+
+
+        <div class="form-group">
+
+          <label>
+            Tell us more
+          </label>
+
+          <textarea
+            id="jesusMessage"
+            placeholder="What's on your mind?"
+            required
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="btn btn-green"
+          style="width:100%;"
+        >
+          Continue on WhatsApp
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
+  <script>
+
+    /* MOBILE MENU */
+
+    function toggleMenu() {
+
+      document
+        .getElementById("navigation")
+        .classList.toggle("active");
+
+    }
+
+
+    function closeMenu() {
+
+      document
+        .getElementById("navigation")
+        .classList.remove("active");
+
+    }
+
+
+    /* OPEN MODAL */
+
+    function openModal(id) {
+
+      document
+        .getElementById(id)
+        .classList.add("active");
+
+      document.body.style.overflow = "hidden";
+
+    }
+
+
+    /* CLOSE MODAL */
+
+    function closeModal(id) {
+
+      document
+        .getElementById(id)
+        .classList.remove("active");
+
+      document.body.style.overflow = "auto";
+
+    }
+
+
+    /* CLOSE MODAL WHEN CLICKING OUTSIDE */
+
+    window.addEventListener("click", function(event) {
+
+      if (event.target.classList.contains("modal")) {
+
+        event.target.classList.remove("active");
+
+        document.body.style.overflow = "auto";
+
+      }
+
+    });
+
+
+    /* WHATSAPP */
+
+    function sendWhatsApp(message) {
+
+      const phoneNumber = "2349061653995";
+
+      const encodedMessage =
+        encodeURIComponent(message);
+
+      const whatsappURL =
+        "https://wa.me/" +
+        phoneNumber +
+        "?text=" +
+        encodedMessage;
+
+      window.open(
+        whatsappURL,
+        "_blank"
+      );
+
+    }
+
+
+    /* TALK FORM */
+
+    document
+      .getElementById("talkForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const topic =
+          document.getElementById("talkTopic").value;
+
+        const name =
+          document.getElementById("talkName").value;
+
+        const age =
+          document.getElementById("talkAge").value;
+
+        const email =
+          document.getElementById("talkEmail").value
+          || "Not provided";
+
+        const phone =
+          document.getElementById("talkPhone").value
+          || "Not provided";
+
+        const contact =
+          document.getElementById("talkContact").value;
+
+        const time =
+          document.getElementById("talkTime").value
+          || "Not provided";
+
+        const message =
+          document.getElementById("talkMessage").value;
+
+        const extra =
+          document.getElementById("talkExtra").value
+          || "None";
+
+
+        const whatsappMessage =
+
+`Hello 1MPACT 👋
+
+I would like someone to talk to me.
+
+WHAT I NEED:
+${topic}
+
+NAME:
+${name}
+
+AGE RANGE:
+${age}
+
+EMAIL:
+${email}
+
+PHONE / WHATSAPP:
+${phone}
+
+PREFERRED CONTACT:
+${contact}
+
+BEST TIME TO REACH ME:
+${time}
+
+WHAT'S ON MY HEART:
+${message}
+
+ANYTHING ELSE:
+${extra}
+
+Thank you for being available to listen.`;
+
+
+        sendWhatsApp(whatsappMessage);
+
+      });
+
+
+    /* JESUS FORM */
+
+    document
+      .getElementById("jesusForm")
+      .addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+
+        const topic =
+          document.getElementById("jesusTopic").value;
+
+        const name =
+          document.getElementById("jesusName").value;
+
+        const phone =
+          document.getElementById("jesusPhone").value
+          || "Not provided";
+
+        const message =
+          document.getElementById("jesusMessage").value;
+
+
+        const whatsappMessage =
+
+`Hello 1MPACT 👋
+
+I want to talk about Jesus / my faith.
+
+WHAT I WANT:
+${topic}
+
+NAME:
+${name}
+
+PHONE / WHATSAPP:
+${phone}
+
+MY MESSAGE:
+${message}
+
+I would like someone to reach out to me.`;
+
+
+        sendWhatsApp(whatsappMessage);
+
+      });
+
+
+    /* YEAR */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+  </script>
+
+</body>
+</html>
